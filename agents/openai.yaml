@@ -1,0 +1,4 @@
+interface:
+  display_name: "群晖 NAS CLI"
+  short_description: "通过命令行管理 NAS 文件、搜索校验、压缩包与系统状态"
+  default_prompt: "使用 $synology-nas 的 CLI 查看能力与状态，在授权范围内预览并执行文件任务。"

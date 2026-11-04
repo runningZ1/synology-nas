@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "osenso-synology-nas-cli"
+version = "0.2.0"
+description = "Bounded, headless Synology NAS CLI for agents and humans"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/runningZ1/synology-nas"
+Issues = "https://github.com/runningZ1/synology-nas/issues"
+
+[project.scripts]
+synology-nas = "synology_nas_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

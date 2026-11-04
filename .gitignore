@@ -1,0 +1,30 @@
+# Local NAS configuration and credentials
+/config.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*password*.txt
+*credentials*.json
+
+# Private device inventories and live responses
+/references/local-nas.md
+/references/nas-directory-tree-*.md
+/references/device-api-discovery-*.json
+/references/cli-live-acceptance.json
+
+# Python build and local tooling
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+.DS_Store
+Thumbs.db

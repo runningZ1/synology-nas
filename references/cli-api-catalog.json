@@ -1,0 +1,1075 @@
+{
+  "version": "0.2.0",
+  "json_methods": [
+    {
+      "api": "SYNO.FileStation.Info",
+      "method": "get",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.List",
+      "method": "list_share",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [],
+      "optional": [
+        "offset",
+        "limit",
+        "sort_by",
+        "sort_direction",
+        "additional"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.List",
+      "method": "list",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [
+        "folder_path"
+      ],
+      "optional": [
+        "offset",
+        "limit",
+        "sort_by",
+        "sort_direction",
+        "additional",
+        "pattern",
+        "filetype"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.List",
+      "method": "getinfo",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [
+        "path"
+      ],
+      "optional": [
+        "additional"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Search",
+      "method": "start",
+      "version_cap": 2,
+      "effect": "compute",
+      "required": [
+        "folder_path"
+      ],
+      "optional": [
+        "recursive",
+        "pattern",
+        "extension",
+        "filetype",
+        "size_from",
+        "size_to",
+        "mtime_from",
+        "mtime_to",
+        "crtime_from",
+        "crtime_to",
+        "atime_from",
+        "atime_to"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Search",
+      "method": "list",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [
+        "taskid"
+      ],
+      "optional": [
+        "offset",
+        "limit",
+        "sort_by",
+        "sort_direction",
+        "additional",
+        "pattern",
+        "filetype"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Search",
+      "method": "stop",
+      "version_cap": 2,
+      "effect": "job",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Search",
+      "method": "clean",
+      "version_cap": 2,
+      "effect": "job",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.VirtualFolder",
+      "method": "list",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [
+        "type"
+      ],
+      "optional": [
+        "offset",
+        "limit",
+        "sort_by",
+        "sort_direction",
+        "additional"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Favorite",
+      "method": "list",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [],
+      "optional": [
+        "offset",
+        "limit",
+        "sort_by",
+        "sort_direction",
+        "additional"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Favorite",
+      "method": "add",
+      "version_cap": 2,
+      "effect": "write",
+      "required": [
+        "path",
+        "name"
+      ],
+      "optional": [
+        "index"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Favorite",
+      "method": "delete",
+      "version_cap": 2,
+      "effect": "write",
+      "required": [
+        "path"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Favorite",
+      "method": "edit",
+      "version_cap": 2,
+      "effect": "write",
+      "required": [
+        "path",
+        "name"
+      ],
+      "optional": [
+        "index"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Favorite",
+      "method": "replace_all",
+      "version_cap": 2,
+      "effect": "write",
+      "required": [
+        "path",
+        "name"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Favorite",
+      "method": "clear_broken",
+      "version_cap": 2,
+      "effect": "write",
+      "required": [],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.DirSize",
+      "method": "start",
+      "version_cap": 2,
+      "effect": "compute",
+      "required": [
+        "path"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.DirSize",
+      "method": "status",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.DirSize",
+      "method": "stop",
+      "version_cap": 2,
+      "effect": "job",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.MD5",
+      "method": "start",
+      "version_cap": 2,
+      "effect": "compute",
+      "required": [
+        "file_path"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.MD5",
+      "method": "status",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.MD5",
+      "method": "stop",
+      "version_cap": 2,
+      "effect": "job",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.CheckPermission",
+      "method": "write",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [
+        "path",
+        "filename"
+      ],
+      "optional": [
+        "overwrite",
+        "create_only"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Sharing",
+      "method": "getinfo",
+      "version_cap": 3,
+      "effect": "read",
+      "required": [
+        "id"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Sharing",
+      "method": "list",
+      "version_cap": 3,
+      "effect": "read",
+      "required": [],
+      "optional": [
+        "offset",
+        "limit",
+        "sort_by",
+        "sort_direction",
+        "additional"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Sharing",
+      "method": "create",
+      "version_cap": 3,
+      "effect": "sharing",
+      "required": [
+        "path"
+      ],
+      "optional": [
+        "password",
+        "date_expired",
+        "date_available"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Sharing",
+      "method": "delete",
+      "version_cap": 3,
+      "effect": "sharing",
+      "required": [
+        "id"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Sharing",
+      "method": "edit",
+      "version_cap": 3,
+      "effect": "sharing",
+      "required": [
+        "id"
+      ],
+      "optional": [
+        "password",
+        "date_expired",
+        "date_available"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Sharing",
+      "method": "clear_invalid",
+      "version_cap": 3,
+      "effect": "sharing",
+      "required": [],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.CreateFolder",
+      "method": "create",
+      "version_cap": 2,
+      "effect": "file-write",
+      "required": [
+        "folder_path",
+        "name"
+      ],
+      "optional": [
+        "force_parent",
+        "additional"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Rename",
+      "method": "rename",
+      "version_cap": 2,
+      "effect": "file-write",
+      "required": [
+        "path",
+        "name"
+      ],
+      "optional": [
+        "additional",
+        "search_taskid"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.CopyMove",
+      "method": "start",
+      "version_cap": 3,
+      "effect": "file-write",
+      "required": [
+        "path",
+        "dest_folder_path"
+      ],
+      "optional": [
+        "overwrite",
+        "remove_src",
+        "accurate_progress",
+        "search_taskid"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.CopyMove",
+      "method": "status",
+      "version_cap": 3,
+      "effect": "read",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.CopyMove",
+      "method": "stop",
+      "version_cap": 3,
+      "effect": "job",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Delete",
+      "method": "start",
+      "version_cap": 2,
+      "effect": "file-delete",
+      "required": [
+        "path"
+      ],
+      "optional": [
+        "recursive",
+        "accurate_progress",
+        "search_taskid"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Delete",
+      "method": "delete",
+      "version_cap": 2,
+      "effect": "file-delete",
+      "required": [
+        "path"
+      ],
+      "optional": [
+        "recursive",
+        "search_taskid"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Delete",
+      "method": "status",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Delete",
+      "method": "stop",
+      "version_cap": 2,
+      "effect": "job",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Extract",
+      "method": "start",
+      "version_cap": 2,
+      "effect": "file-write",
+      "required": [
+        "file_path",
+        "dest_folder_path"
+      ],
+      "optional": [
+        "overwrite",
+        "keep_dir",
+        "create_subfolder",
+        "codepage",
+        "password",
+        "item_id"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Extract",
+      "method": "list",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [
+        "file_path"
+      ],
+      "optional": [
+        "offset",
+        "limit",
+        "sort_by",
+        "sort_direction",
+        "additional",
+        "codepage",
+        "password",
+        "item_id"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Extract",
+      "method": "status",
+      "version_cap": 2,
+      "effect": "read",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Extract",
+      "method": "stop",
+      "version_cap": 2,
+      "effect": "job",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Compress",
+      "method": "start",
+      "version_cap": 3,
+      "effect": "file-write",
+      "required": [
+        "path",
+        "dest_file_path"
+      ],
+      "optional": [
+        "level",
+        "mode",
+        "format",
+        "password"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Compress",
+      "method": "status",
+      "version_cap": 3,
+      "effect": "read",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Compress",
+      "method": "stop",
+      "version_cap": 3,
+      "effect": "job",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.BackgroundTask",
+      "method": "list",
+      "version_cap": 3,
+      "effect": "read",
+      "required": [],
+      "optional": [
+        "offset",
+        "limit",
+        "sort_by",
+        "sort_direction",
+        "additional",
+        "api_filter"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.BackgroundTask",
+      "method": "clear_finished",
+      "version_cap": 3,
+      "effect": "job",
+      "required": [
+        "taskid"
+      ],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf",
+      "is_idempotent": false,
+      "dry_run": true,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Core.System",
+      "method": "info",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Core.System.Utilization",
+      "method": "get",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [
+        "type"
+      ],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Core.Storage.Disk",
+      "method": "list",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Core.Storage.Pool",
+      "method": "list",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Core.Storage.Volume",
+      "method": "list",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Storage.CGI.Storage",
+      "method": "load_info",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Core.Package",
+      "method": "list",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [
+        "additional",
+        "ignore_hidden"
+      ],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Core.Service",
+      "method": "get",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Core.Share",
+      "method": "list",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [
+        "offset",
+        "limit",
+        "additional"
+      ],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Core.FileServ.SMB",
+      "method": "get",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Core.FileServ.NFS",
+      "method": "get",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Docker.Container",
+      "method": "list",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [
+        "offset",
+        "limit",
+        "type"
+      ],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Docker.Container.Resource",
+      "method": "get",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.Backup.Service.NetworkBackup",
+      "method": "get",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Snapshot",
+      "method": "list",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [
+        "path"
+      ],
+      "optional": [
+        "offset",
+        "limit"
+      ],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.FileStation.Worm",
+      "method": "get",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [
+        "path"
+      ],
+      "optional": [],
+      "source": "https://github.com/N4S4/synology-api/tree/969216beecf08b25a1559046efb4c1f37fb8136c/synology_api",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.DownloadStation.Info",
+      "method": "getinfo",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/DownloadStation/All/enu/Synology_Download_Station_Web_API.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.DownloadStation.Info",
+      "method": "getconfig",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/DownloadStation/All/enu/Synology_Download_Station_Web_API.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.DownloadStation.Statistic",
+      "method": "getinfo",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/DownloadStation/All/enu/Synology_Download_Station_Web_API.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.DownloadStation.Task",
+      "method": "list",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [
+        "offset",
+        "limit",
+        "additional"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/DownloadStation/All/enu/Synology_Download_Station_Web_API.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.DownloadStation.Task",
+      "method": "getinfo",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [
+        "id"
+      ],
+      "optional": [
+        "additional"
+      ],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/DownloadStation/All/enu/Synology_Download_Station_Web_API.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    },
+    {
+      "api": "SYNO.DownloadStation.Schedule",
+      "method": "getconfig",
+      "version_cap": 1,
+      "effect": "read",
+      "required": [],
+      "optional": [],
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/DownloadStation/All/enu/Synology_Download_Station_Web_API.pdf",
+      "is_idempotent": true,
+      "dry_run": false,
+      "verification": "documented; see acceptance report for live coverage"
+    }
+  ],
+  "binary_commands": {
+    "upload": {
+      "api": "SYNO.FileStation.Upload",
+      "method": "upload",
+      "version_cap": 2,
+      "effect": "file-write",
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf"
+    },
+    "download": {
+      "api": "SYNO.FileStation.Download",
+      "method": "download",
+      "version_cap": 2,
+      "effect": "read",
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf"
+    },
+    "thumbnail": {
+      "api": "SYNO.FileStation.Thumb",
+      "method": "get",
+      "version_cap": 2,
+      "effect": "read",
+      "source": "https://global.download.synology.com/download/Document/Software/DeveloperGuide/Package/FileStation/All/enu/Synology_File_Station_API_Guide.pdf"
+    }
+  }
+}
